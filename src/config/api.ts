@@ -7,12 +7,12 @@ const API_CONFIG = {
     blogsEndpoint: 'http://localhost:8000/medium-blogs',
     healthEndpoint: 'http://localhost:8000/health'
   },
-  // Production - Updated with actual Render backend URL
+  // Production - Updated with new Render backend URL
   production: {
-    baseUrl: 'https://portfolio-backend-bgh1.onrender.com',
-    chatEndpoint: 'https://portfolio-backend-bgh1.onrender.com/chat',
-    blogsEndpoint: 'https://portfolio-backend-bgh1.onrender.com/medium-blogs',
-    healthEndpoint: 'https://portfolio-backend-bgh1.onrender.com/health'
+    baseUrl: 'https://satvik-portfolio-backend.onrender.com',
+    chatEndpoint: 'https://satvik-portfolio-backend.onrender.com/chat',
+    blogsEndpoint: 'https://satvik-portfolio-backend.onrender.com/medium-blogs',
+    healthEndpoint: 'https://satvik-portfolio-backend.onrender.com/health'
   }
 }
 

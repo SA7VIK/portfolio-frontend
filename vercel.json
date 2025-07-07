@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://api.sa7vik.in/$1"
+      "destination": "https://satvik-portfolio-backend.onrender.com/$1"
     },
     {
       "source": "/chatbot",
