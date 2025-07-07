@@ -3,6 +3,14 @@
     {
       "source": "/api/(.*)",
       "destination": "https://api.sa7vik.in/$1"
+    },
+    {
+      "source": "/chatbot",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
