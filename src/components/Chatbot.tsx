@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Send, ArrowLeft, Bot, User } from 'lucide-react'
+import apiConfig from '../config/api'
 
 interface Message {
   id: string
@@ -76,8 +77,7 @@ const Chatbot: React.FC = () => {
     setIsLoading(true)
 
     try {
-      const apiUrl = process.env.NODE_ENV === 'production' ? 'https://api.sa7vik.in/chat' : 'http://localhost:8000/chat';
-      const response = await fetch(apiUrl, {
+      const response = await fetch(apiConfig.chatEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
