@@ -13,10 +13,10 @@ const About: React.FC = () => {
           className="text-left mb-8 sm:mb-12 font-mono px-4"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 font-mono">
-            <span className="text-gradient">Developer</span>
+            <span className="text-gradient">Experience</span>
           </h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-2xl">
-            My journey in software development and what drives me.
+            My professional journey and expertise in software development.
           </p>
         </motion.div>
 
@@ -29,9 +29,6 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             className="mb-8 sm:mb-12 px-4"
           >
-            <h3 className="text-xl sm:text-2xl font-mono font-semibold text-gray-900 mb-4 sm:mb-6">
-              About Me
-            </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed font-mono">
               <p className="text-sm sm:text-base">
                 Architecting <span className="text-green-600">surveillance radar systems</span> with <span className="text-green-600">BLAS/MKL</span> optimization for real-time signal processing. Implementing <span className="text-green-600">Quantum Machine Learning</span> for 6G network error correction and bit prediction. Contributing to <span className="text-green-600">agent-to-agent MCP</span> frameworks and <span className="text-green-600">RAG systems</span> with measurable performance gains. Because apparently, making machines think at quantum speeds isn't enough—they need to predict the future too.
@@ -48,9 +45,6 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           className="mt-8 sm:mt-12 px-4"
         >
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6 font-mono">
-            Experience
-          </h3>
           <div className="space-y-3 sm:space-y-4">
             <div className="border-l-4 border-primary-500 pl-6">
               <div className="flex items-center justify-between mb-2">
