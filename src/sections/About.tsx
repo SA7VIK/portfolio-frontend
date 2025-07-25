@@ -13,7 +13,7 @@ const About: React.FC = () => {
           className="text-left mb-8 sm:mb-12 font-mono px-4"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 font-mono">
-            <span className="text-primary-600">class</span> <span className="text-gradient">Developer</span> &#123; &#125;
+            <span className="text-gradient">Developer</span>
           </h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-2xl">
             My journey in software development and what drives me.
@@ -30,7 +30,7 @@ const About: React.FC = () => {
             className="mb-8 sm:mb-12 px-4"
           >
             <h3 className="text-xl sm:text-2xl font-mono font-semibold text-gray-900 mb-4 sm:mb-6">
-              constructor() &#123;
+              About Me
             </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed font-mono">
               <p className="text-sm sm:text-base">

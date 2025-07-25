@@ -73,7 +73,7 @@ const Projects: React.FC = () => {
           className="text-left mb-8 sm:mb-12 px-4"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 font-mono">
-            <span className="text-primary-600">function</span> <span className="text-gradient">Projects</span>()
+            <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-2xl font-mono">
             Some of my recent work and personal projects.

@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
           className="text-left mb-8 sm:mb-12 px-4"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 font-mono">
-            <span className="text-primary-600">async</span> <span className="text-gradient">connect</span>()
+            <span className="text-gradient">Contact</span>
           </h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-2xl font-mono">
             Let's work together on your next project.

@@ -100,7 +100,7 @@ const Hero: React.FC = () => {
             className="mb-6 sm:mb-8 px-4"
           >
             <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-mono text-gray-600 mb-3 sm:mb-4 leading-tight">
-              <span className="text-primary-600">const</span> engineer = <span className="text-accent-600">'AI Engineer & Researcher'</span>;
+              AI Engineer & Researcher
             </h2>
             <p className="text-xs sm:text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed font-mono mb-3 sm:mb-4 px-2">
               AI Engineer crafting <span className="text-green-600">high-performance computing</span> algorithms and <span className="text-green-600">intelligent</span> solutions. Because apparently, making machines think isn't enough—they need to do it faster than humans can blink.
