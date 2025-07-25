@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
             <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-mono text-gray-600 mb-3 sm:mb-4 leading-tight">
               AI Engineer & Researcher
             </h2>
-            <p className="text-xs sm:text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed font-mono mb-3 sm:mb-4 px-2">
+            <p className="text-xs sm:text-base md:text-lg text-gray-600 max-w-4xl leading-relaxed font-mono mb-3 sm:mb-4">
               AI Engineer crafting <span className="text-green-600">high-performance computing</span> algorithms and <span className="text-green-600">intelligent</span> solutions. Because apparently, making machines think isn't enough—they need to do it faster than humans can blink.
             </p>
 
@@ -137,45 +137,45 @@ const Hero: React.FC = () => {
             </div>
             
             {/* Navigation Buttons */}
-            <div className="relative z-10 flex flex-wrap justify-start gap-2 sm:gap-3 mt-6">
+            <div className="relative z-10 flex flex-wrap justify-start gap-3 sm:gap-4 mt-6">
               <button
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                className="px-4 sm:px-6 py-3 bg-white/20 backdrop-blur-md border border-white/20 rounded-xl font-mono font-semibold text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm sm:text-base"
                 style={{ WebkitBackdropFilter: 'blur(12px)' }}
               >
                 Experience
               </button>
               <button
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                className="px-4 sm:px-6 py-3 bg-white/20 backdrop-blur-md border border-white/20 rounded-xl font-mono font-semibold text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm sm:text-base"
                 style={{ WebkitBackdropFilter: 'blur(12px)' }}
               >
                 Projects
               </button>
               <button
                 onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                className="px-4 sm:px-6 py-3 bg-white/20 backdrop-blur-md border border-white/20 rounded-xl font-mono font-semibold text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm sm:text-base"
                 style={{ WebkitBackdropFilter: 'blur(12px)' }}
               >
                 Skills
               </button>
               <button
                 onClick={() => document.getElementById('blogs')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                className="px-4 sm:px-6 py-3 bg-white/20 backdrop-blur-md border border-white/20 rounded-xl font-mono font-semibold text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm sm:text-base"
                 style={{ WebkitBackdropFilter: 'blur(12px)' }}
               >
                 Blogs
               </button>
               <button
                 onClick={() => document.getElementById('achievements')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                className="px-4 sm:px-6 py-3 bg-white/20 backdrop-blur-md border border-white/20 rounded-xl font-mono font-semibold text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm sm:text-base"
                 style={{ WebkitBackdropFilter: 'blur(12px)' }}
               >
                 Achievements
               </button>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                className="px-4 sm:px-6 py-3 bg-white/20 backdrop-blur-md border border-white/20 rounded-xl font-mono font-semibold text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm sm:text-base"
                 style={{ WebkitBackdropFilter: 'blur(12px)' }}
               >
                 Contact
