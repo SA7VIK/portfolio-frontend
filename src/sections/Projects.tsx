@@ -70,17 +70,17 @@ const Projects: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 px-4"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 font-mono">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-mono">
             <span className="text-primary-600">function</span> <span className="text-gradient">Projects</span>()
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-mono">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-mono">
             Some of my recent work and personal projects.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 relative px-4">
           {/* Animated gradient bar behind project cards */}
           <motion.div 
             className="absolute inset-0 flex justify-center items-center pointer-events-none z-0"
@@ -103,15 +103,15 @@ const Projects: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="project-card-dark group text-white relative z-10 cursor-pointer block transition-shadow transition-transform duration-150 hover:shadow-xl hover:-translate-y-1"
+              className="project-card-dark group text-white relative z-10 cursor-pointer block transition-shadow transition-transform duration-150 hover:shadow-xl hover:-translate-y-1 p-4 sm:p-6"
             >
               {/* Project Header */}
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-mono font-semibold text-white group-hover:text-primary-400 transition-colors duration-100">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-2">
+                <h3 className="text-lg sm:text-xl font-mono font-semibold text-white group-hover:text-primary-400 transition-colors duration-100">
                   {project.title}
                 </h3>
                 {project.status && (
-                  <span className={`px-2 py-1 text-xs font-mono font-medium rounded ${
+                  <span className={`px-2 py-1 text-xs font-mono font-medium rounded self-start ${
                     project.status === 'WIP' 
                       ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' 
                       : 'bg-green-500/20 text-green-400 border border-green-500/30'
@@ -122,12 +122,12 @@ const Projects: React.FC = () => {
               </div>
 
               {/* Project Description */}
-              <p className="text-gray-300 mb-4 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-300 mb-4 leading-relaxed">
                 {project.description}
               </p>
 
               {/* Technologies */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
                 {project.technologies.map((tech) => (
                   <span key={tech} className="px-2 py-1 text-xs font-mono bg-gray-800 text-gray-300 border border-gray-700 rounded">
                     {tech}

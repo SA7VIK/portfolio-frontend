@@ -11,17 +11,17 @@ const Contact: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 px-4"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 font-mono">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-mono">
             <span className="text-primary-600">async</span> <span className="text-gradient">connect</span>()
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-mono">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-mono">
             Let's work together on your next project.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 px-4">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -29,53 +29,53 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 sm:mb-6">
               Let's Connect
             </h3>
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-primary-600" />
+            <div className="space-y-4 sm:space-y-6">
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
                 </div>
-                <div>
-                  <h4 className="font-mono font-medium text-gray-900">Email</h4>
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-mono font-medium text-gray-900 text-sm sm:text-base">Email</h4>
                   <a 
                     href="mailto:your.email@example.com" 
-                    className="text-primary-600 hover:text-primary-700 transition-colors duration-200 font-mono"
+                    className="text-primary-600 hover:text-primary-700 transition-colors duration-200 font-mono text-sm sm:text-base break-all"
                   >
                     your.email@example.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                  <Github className="w-6 h-6 text-primary-600" />
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Github className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
                 </div>
-                <div>
-                  <h4 className="font-mono font-medium text-gray-900">GitHub</h4>
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-mono font-medium text-gray-900 text-sm sm:text-base">GitHub</h4>
                   <a 
                     href="https://github.com/yourusername" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-700 transition-colors duration-200 font-mono"
+                    className="text-primary-600 hover:text-primary-700 transition-colors duration-200 font-mono text-sm sm:text-base break-all"
                   >
                     github.com/yourusername
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                  <Linkedin className="w-6 h-6 text-primary-600" />
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
                 </div>
-                <div>
-                  <h4 className="font-mono font-medium text-gray-900">LinkedIn</h4>
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-mono font-medium text-gray-900 text-sm sm:text-base">LinkedIn</h4>
                   <a 
                     href="https://linkedin.com/in/yourusername" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-700 transition-colors duration-200 font-mono"
+                    className="text-primary-600 hover:text-primary-700 transition-colors duration-200 font-mono text-sm sm:text-base break-all"
                   >
                     linkedin.com/in/yourusername
                   </a>

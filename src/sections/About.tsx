@@ -10,12 +10,12 @@ const About: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16 font-mono"
+          className="text-center mb-12 sm:mb-16 font-mono px-4"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 font-mono">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-mono">
             <span className="text-primary-600">class</span> <span className="text-gradient">Developer</span> &#123; &#125;
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             My journey in software development and what drives me.
           </p>
         </motion.div>
@@ -27,25 +27,15 @@ const About: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className="mb-12 sm:mb-16 px-4"
           >
-            <h3 className="text-2xl font-mono font-semibold text-gray-900 mb-6">
+            <h3 className="text-xl sm:text-2xl font-mono font-semibold text-gray-900 mb-4 sm:mb-6">
               constructor() &#123;
             </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed font-mono">
-              <p>
+              <p className="text-sm sm:text-base">
                 Architecting <span className="text-green-600">surveillance radar systems</span> with <span className="text-green-600">BLAS/MKL</span> optimization for real-time signal processing. Implementing <span className="text-green-600">Quantum Machine Learning</span> for 6G network error correction and bit prediction. Contributing to <span className="text-green-600">agent-to-agent MCP</span> frameworks and <span className="text-green-600">RAG systems</span> with measurable performance gains. Because apparently, making machines think at quantum speeds isn't enough—they need to predict the future too.
               </p>
-              <div className="mt-6">
-                <a 
-                  href="https://drive.google.com/file/d/1gSwhAMhyevVlYe8QRe-DzlR3UCvpuFGV/view?usp=share_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200 font-mono text-sm"
-                >
-                  📄 View Resume
-                </a>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -56,12 +46,12 @@ const About: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-16"
+          className="mt-12 sm:mt-16 px-4"
         >
-          <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center font-mono">
+          <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-6 sm:mb-8 text-center font-mono">
             Experience
           </h3>
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <div className="border-l-4 border-primary-500 pl-6">
               <div className="flex items-center justify-between mb-2">
                 <h4 className="font-mono font-semibold text-gray-900">Junior Research Fellow</h4>

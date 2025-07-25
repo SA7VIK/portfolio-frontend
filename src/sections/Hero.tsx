@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 font-mono"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 font-mono px-4"
           >
             <ScrambleName />
           </motion.h1>
@@ -97,39 +97,39 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="mb-8"
+            className="mb-6 sm:mb-8 px-4"
           >
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-mono text-gray-600 mb-6">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-mono text-gray-600 mb-4 sm:mb-6 leading-tight">
               <span className="text-primary-600">const</span> engineer = <span className="text-accent-600">'AI Engineer & Researcher'</span>;
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-mono mb-4">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-mono mb-4 px-2">
               AI Engineer crafting <span className="text-green-600">high-performance computing</span> algorithms and <span className="text-green-600">intelligent</span> solutions. Because apparently, making machines think isn't enough—they need to do it faster than humans can blink.
             </p>
 
           </motion.div>
           
           {/* CTA Buttons with animated gradient bar */}
-          <div className="relative flex flex-col items-center mb-12">
+          <div className="relative flex flex-col items-center mb-8 sm:mb-12 px-4">
             {/* Glowing gradient bar behind buttons */}
             <div
               ref={gradientRef}
               style={{ willChange: 'transform, opacity' }}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-24 w-[420px] max-w-full bg-gradient-to-r from-primary-500 via-secondary-400 to-accent-400 opacity-30 rounded-full pointer-events-none animate-gradient-x z-0 blur-2xl"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-20 sm:h-24 w-[320px] sm:w-[420px] max-w-full bg-gradient-to-r from-primary-500 via-secondary-400 to-accent-400 opacity-30 rounded-full pointer-events-none animate-gradient-x z-0 blur-2xl"
             />
-            <div className="relative z-10 flex flex-col sm:flex-row gap-4">
+            <div className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
               <a
                 href="/chatbot"
-                className="flex items-center gap-2 px-6 py-3 bg-white/30 backdrop-blur-md border border-white/30 rounded-xl font-mono font-semibold text-black shadow-lg hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400"
+                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-white/30 backdrop-blur-md border border-white/30 rounded-xl font-mono font-semibold text-black shadow-lg hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm sm:text-base"
                 style={{ WebkitBackdropFilter: 'blur(12px)' }}
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Ask My AI
               </a>
               <a
                 href="https://drive.google.com/file/d/1gSwhAMhyevVlYe8QRe-DzlR3UCvpuFGV/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-white/20 backdrop-blur-md border border-white/20 rounded-xl font-mono font-semibold text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400"
+                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-white/20 backdrop-blur-md border border-white/20 rounded-xl font-mono font-semibold text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm sm:text-base"
                 style={{ WebkitBackdropFilter: 'blur(12px)' }}
               >
                 Resume

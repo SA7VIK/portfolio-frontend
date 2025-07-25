@@ -40,19 +40,19 @@
 
 @layer components {
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+    @apply px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24;
   }
   
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
   .heading-primary {
-    @apply text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900;
   }
   
   .heading-secondary {
-    @apply text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800;
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800;
   }
   
   .text-gradient {
@@ -80,7 +80,7 @@
   }
   
   .project-card-dark {
-    @apply bg-gray-900 rounded-xl shadow-lg border border-gray-700 p-6 hover:shadow-xl transition-shadow duration-150 hover:-translate-y-1;
+    @apply bg-gray-900 rounded-xl shadow-lg border border-gray-700 p-4 sm:p-6 hover:shadow-xl transition-shadow duration-150 hover:-translate-y-1;
   }
   
   .math-equation {
@@ -130,6 +130,24 @@
 @layer utilities {
   .animate-gradient-x {
     animation: gradient-x 3s ease-in-out infinite alternate;
+  }
+  
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    .text-balance {
+      text-wrap: balance;
+    }
+    
+    /* Improve touch targets */
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Better line height for mobile */
+    .mobile-leading {
+      line-height: 1.6;
+    }
   }
 }
 
