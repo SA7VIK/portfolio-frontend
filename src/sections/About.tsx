@@ -36,6 +36,16 @@ const About: React.FC = () => {
               <p>
                 Architecting <span className="text-green-600">surveillance radar systems</span> with <span className="text-green-600">BLAS/MKL</span> optimization for real-time signal processing. Implementing <span className="text-green-600">Quantum Machine Learning</span> for 6G network error correction and bit prediction. Contributing to <span className="text-green-600">agent-to-agent MCP</span> frameworks and <span className="text-green-600">RAG systems</span> with measurable performance gains. Because apparently, making machines think at quantum speeds isn't enough—they need to predict the future too.
               </p>
+              <div className="mt-6">
+                <a 
+                  href="https://drive.google.com/file/d/1gSwhAMhyevVlYe8QRe-DzlR3UCvpuFGV/view?usp=share_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200 font-mono text-sm"
+                >
+                  📄 View Resume
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>

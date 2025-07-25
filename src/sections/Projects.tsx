@@ -50,6 +50,15 @@ const Projects: React.FC = () => {
       githubUrl: 'https://github.com/sa7vik/portfolio-chatbot',
       liveUrl: 'https://your-portfolio.com'
     },
+    {
+      id: '5',
+      title: 'LLM Hallucination Detection Pipeline',
+      status: 'Live',
+      description: 'Advanced pipeline that detects hallucinations in LLM responses by analyzing log probabilities and confidence rates. The system evaluates text authenticity by examining token-level confidence scores, providing a factual accuracy assessment for AI-generated content.',
+      technologies: ['Machine Learning', 'NLP', 'Log Probability Analysis', 'Python', 'LLM Evaluation', 'Confidence Scoring'],
+      githubUrl: 'https://github.com/sa7vik/llm-hallucination-detection',
+      liveUrl: 'https://llm-hallucination-detection.onrender.com'
+    },
 
   ]
 
