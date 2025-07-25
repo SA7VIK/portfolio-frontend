@@ -135,6 +135,52 @@ const Hero: React.FC = () => {
                 Resume
               </a>
             </div>
+            
+            {/* Navigation Buttons */}
+            <div className="relative z-10 flex flex-wrap justify-start gap-2 sm:gap-3 mt-6">
+              <button
+                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                style={{ WebkitBackdropFilter: 'blur(12px)' }}
+              >
+                Experience
+              </button>
+              <button
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                style={{ WebkitBackdropFilter: 'blur(12px)' }}
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                style={{ WebkitBackdropFilter: 'blur(12px)' }}
+              >
+                Skills
+              </button>
+              <button
+                onClick={() => document.getElementById('blogs')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                style={{ WebkitBackdropFilter: 'blur(12px)' }}
+              >
+                Blogs
+              </button>
+              <button
+                onClick={() => document.getElementById('achievements')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                style={{ WebkitBackdropFilter: 'blur(12px)' }}
+              >
+                Achievements
+              </button>
+              <button
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-md border border-white/20 rounded-lg font-mono font-medium text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-xs sm:text-sm"
+                style={{ WebkitBackdropFilter: 'blur(12px)' }}
+              >
+                Contact
+              </button>
+            </div>
           </div>
         </motion.div>
         

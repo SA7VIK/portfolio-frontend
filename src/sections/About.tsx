@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const About: React.FC = () => {
   return (
-    <section className="section-padding bg-white">
+    <section id="about" className="section-padding bg-white">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

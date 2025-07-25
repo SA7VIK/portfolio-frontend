@@ -4,7 +4,7 @@ import { Mail, Github, Linkedin, MessageCircle } from 'lucide-react'
 
 const Contact: React.FC = () => {
   return (
-    <section className="section-padding">
+    <section id="contact" className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
