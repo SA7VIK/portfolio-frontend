@@ -11,17 +11,17 @@ const Contact: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16 px-4"
+          className="text-center mb-8 sm:mb-12 px-4"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-mono">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 font-mono">
             <span className="text-primary-600">async</span> <span className="text-gradient">connect</span>()
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-mono">
+          <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto font-mono">
             Let's work together on your next project.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 px-4">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

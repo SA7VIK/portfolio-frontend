@@ -51,7 +51,7 @@ const ScrambleName: React.FC = () => {
       style={{
         color: 'black',
       }}
-      className="tracking-widest"
+      className="tracking-widest whitespace-nowrap"
     >
       {display.map((char, idx) => (
         <span key={idx} style={{ minWidth: '0.6em', display: 'inline-block' }}>{char}</span>
@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 font-mono px-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 font-mono px-4"
           >
             <ScrambleName />
           </motion.h1>
@@ -99,17 +99,17 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="mb-6 sm:mb-8 px-4"
           >
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-mono text-gray-600 mb-4 sm:mb-6 leading-tight">
+            <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-mono text-gray-600 mb-3 sm:mb-4 leading-tight">
               <span className="text-primary-600">const</span> engineer = <span className="text-accent-600">'AI Engineer & Researcher'</span>;
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-mono mb-4 px-2">
+            <p className="text-xs sm:text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed font-mono mb-3 sm:mb-4 px-2">
               AI Engineer crafting <span className="text-green-600">high-performance computing</span> algorithms and <span className="text-green-600">intelligent</span> solutions. Because apparently, making machines think isn't enough—they need to do it faster than humans can blink.
             </p>
 
           </motion.div>
           
           {/* CTA Buttons with animated gradient bar */}
-          <div className="relative flex flex-col items-center mb-8 sm:mb-12 px-4">
+          <div className="relative flex flex-col items-center mb-6 sm:mb-8 px-4">
             {/* Glowing gradient bar behind buttons */}
             <div
               ref={gradientRef}

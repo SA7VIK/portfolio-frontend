@@ -10,12 +10,12 @@ const About: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16 font-mono px-4"
+          className="text-center mb-8 sm:mb-12 font-mono px-4"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-mono">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 font-mono">
             <span className="text-primary-600">class</span> <span className="text-gradient">Developer</span> &#123; &#125;
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
             My journey in software development and what drives me.
           </p>
         </motion.div>
@@ -27,7 +27,7 @@ const About: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-12 sm:mb-16 px-4"
+            className="mb-8 sm:mb-12 px-4"
           >
             <h3 className="text-xl sm:text-2xl font-mono font-semibold text-gray-900 mb-4 sm:mb-6">
               constructor() &#123;
@@ -46,12 +46,12 @@ const About: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-12 sm:mt-16 px-4"
+          className="mt-8 sm:mt-12 px-4"
         >
-          <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-6 sm:mb-8 text-center font-mono">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6 text-center font-mono">
             Experience
           </h3>
-          <div className="space-y-4 sm:space-y-6">
+          <div className="space-y-3 sm:space-y-4">
             <div className="border-l-4 border-primary-500 pl-6">
               <div className="flex items-center justify-between mb-2">
                 <h4 className="font-mono font-semibold text-gray-900">Junior Research Fellow</h4>
