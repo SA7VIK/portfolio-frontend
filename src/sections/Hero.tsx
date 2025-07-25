@@ -51,10 +51,10 @@ const ScrambleName: React.FC = () => {
       style={{
         color: 'black',
       }}
-      className="tracking-widest whitespace-nowrap"
+      className="tracking-wide sm:tracking-wider md:tracking-widest"
     >
       {display.map((char, idx) => (
-        <span key={idx} style={{ minWidth: '0.6em', display: 'inline-block' }}>{char}</span>
+        <span key={idx} style={{ minWidth: '0.3em', display: 'inline-block' }}>{char}</span>
       ))}
     </span>
   )
@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 font-mono px-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 font-mono px-4 text-center"
           >
             <ScrambleName />
           </motion.h1>
