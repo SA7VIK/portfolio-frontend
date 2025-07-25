@@ -80,14 +80,14 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="text-left"
         >
           {/* Main Heading with scramble animation */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 font-mono px-4 text-center"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 font-mono px-4"
           >
             <ScrambleName />
           </motion.h1>
@@ -109,14 +109,14 @@ const Hero: React.FC = () => {
           </motion.div>
           
           {/* CTA Buttons with animated gradient bar */}
-          <div className="relative flex flex-col items-center mb-6 sm:mb-8 px-4">
+          <div className="relative flex flex-col items-start mb-6 sm:mb-8 px-4">
             {/* Glowing gradient bar behind buttons */}
             <div
               ref={gradientRef}
               style={{ willChange: 'transform, opacity' }}
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-20 sm:h-24 w-[320px] sm:w-[420px] max-w-full bg-gradient-to-r from-primary-500 via-secondary-400 to-accent-400 opacity-30 rounded-full pointer-events-none animate-gradient-x z-0 blur-2xl"
             />
-            <div className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+            <div className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a
                 href="/chatbot"
                 className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-white/30 backdrop-blur-md border border-white/30 rounded-xl font-mono font-semibold text-black shadow-lg hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm sm:text-base"

@@ -10,12 +10,12 @@ const About: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-8 sm:mb-12 font-mono px-4"
+          className="text-left mb-8 sm:mb-12 font-mono px-4"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 font-mono">
             <span className="text-primary-600">class</span> <span className="text-gradient">Developer</span> &#123; &#125;
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 max-w-2xl">
             My journey in software development and what drives me.
           </p>
         </motion.div>
@@ -48,7 +48,7 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           className="mt-8 sm:mt-12 px-4"
         >
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6 text-center font-mono">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6 font-mono">
             Experience
           </h3>
           <div className="space-y-3 sm:space-y-4">
