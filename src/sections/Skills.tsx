@@ -42,7 +42,7 @@ const Skills: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-3"
+          className="flex flex-wrap justify-start gap-3 px-4"
         >
           {skills.map((skill, index) => (
             <motion.span
