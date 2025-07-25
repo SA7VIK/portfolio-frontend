@@ -27,12 +27,12 @@ const Skills: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-left mb-8 sm:mb-12 px-4"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 font-mono">
-            <span className="text-primary-600">const</span> <span className="text-gradient">skills</span> = [];
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 font-mono">
+            <span className="text-gradient">Skills</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-mono">
+          <p className="text-sm sm:text-base text-gray-600 max-w-2xl font-mono">
             Technologies and tools I use to build solutions.
           </p>
         </motion.div>

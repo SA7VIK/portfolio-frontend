@@ -34,22 +34,21 @@ const Blogs: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-left mb-8 sm:mb-12 px-4"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 font-mono">
-            <span className="text-primary-600">const</span> <span className="text-gradient">blogs</span> = [];
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 font-mono">
+            <span className="text-gradient">Blogs</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-mono">
+          <p className="text-sm sm:text-base text-gray-600 max-w-2xl font-mono mb-4">
             Technical articles and insights I share on Medium.
           </p>
           <a
             href="https://medium.com/@sa7vik"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 bg-white/30 backdrop-blur-md border border-white/30 rounded-xl font-mono font-semibold text-black shadow-lg hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400"
-            style={{ WebkitBackdropFilter: 'blur(12px)' }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg font-mono font-semibold text-sm hover:bg-primary-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400"
           >
-            <ExternalLink className="w-5 h-5" />
+            <ExternalLink className="w-4 h-4" />
             See all blogs on Medium
           </a>
         </motion.div>
