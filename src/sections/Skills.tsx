@@ -14,9 +14,7 @@ const Skills: React.FC = () => {
     // Additional Technologies
     'Computer Vision', 'Machine Learning', 'Signal Processing', 'GPU Programming', 'NLP', 'Automation',
     // Network Programming
-    'Unix Network Programming', 'Socket Programming', 'Django', 'Git', 'GitHub', 'Google Cloud',
-    // Languages
-    'English (Professional)', 'Hindi (Native)', 'German (Elementary)'
+    'Unix Network Programming', 'Socket Programming', 'Django', 'Git', 'GitHub', 'Google Cloud'
   ]
 
   return (
