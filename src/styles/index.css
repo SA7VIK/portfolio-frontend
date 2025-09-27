@@ -132,6 +132,15 @@
     animation: gradient-x 3s ease-in-out infinite alternate;
   }
   
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
   /* Mobile-specific improvements */
   @media (max-width: 640px) {
     .text-balance {

@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { User, FolderOpen, Code, BookOpen, Trophy, Mail, Menu, X } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { User, FolderOpen, Code, BookOpen, Trophy, Mail } from 'lucide-react'
 
 const Navigation: React.FC = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState<string | null>(null)
   
   const navItems = [
@@ -27,7 +26,6 @@ const Navigation: React.FC = () => {
     } else {
       console.error('Section not found:', sectionId)
     }
-    setIsMobileMenuOpen(false)
   }
 
   return (
@@ -72,35 +70,19 @@ const Navigation: React.FC = () => {
           className="bg-white/20 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg"
           style={{ WebkitBackdropFilter: 'blur(12px)' }}
         >
-          <div className="flex items-center justify-between p-3">
-            {/* Mobile Menu Button */}
-            <motion.button
-              onClick={() => {
-                console.log('Mobile menu toggled:', !isMobileMenuOpen)
-                setIsMobileMenuOpen(!isMobileMenuOpen)
-              }}
-              className="flex items-center justify-center w-10 h-10 bg-white/30 rounded-xl hover:bg-white/40 transition-colors duration-200"
-              whileTap={{ scale: 0.95 }}
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-5 h-5 text-gray-700" />
-              ) : (
-                <Menu className="w-5 h-5 text-gray-700" />
-              )}
-            </motion.button>
-
-            {/* Quick Access Buttons */}
-            <div className="flex gap-2">
-              {navItems.slice(0, 3).map((item) => {
+          <div className="flex items-center justify-center p-3">
+            {/* All Navigation Buttons */}
+            <div className="flex gap-2 overflow-x-auto scrollbar-hide">
+              {navItems.map((item) => {
                 const Icon = item.icon
                 return (
                   <motion.button
                     key={item.id}
                     onClick={() => {
-                      console.log('Quick access button clicked:', item.id)
+                      console.log('Mobile button clicked:', item.id)
                       scrollToSection(item.id)
                     }}
-                    className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 ${
+                    className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 flex-shrink-0 ${
                       activeSection === item.id 
                         ? 'bg-green-500/30 scale-110' 
                         : 'bg-white/30 hover:bg-white/40 hover:scale-105'
@@ -116,47 +98,6 @@ const Navigation: React.FC = () => {
               })}
             </div>
           </div>
-
-          {/* Mobile Menu Dropdown */}
-          <AnimatePresence>
-            {isMobileMenuOpen && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="border-t border-white/20 overflow-hidden"
-              >
-                <div className="p-3 space-y-2">
-                  {navItems.map((item) => {
-                    const Icon = item.icon
-                    return (
-                      <motion.button
-                        key={item.id}
-                        onClick={() => {
-                          console.log('Dropdown menu item clicked:', item.id)
-                          scrollToSection(item.id)
-                        }}
-                        className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl transition-all duration-200 text-left ${
-                          activeSection === item.id 
-                            ? 'bg-green-500/20 scale-105' 
-                            : 'bg-white/20 hover:bg-white/30'
-                        }`}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <Icon className={`w-4 h-4 ${
-                          activeSection === item.id ? 'text-green-700' : 'text-gray-700'
-                        }`} />
-                        <span className={`text-sm font-mono ${
-                          activeSection === item.id ? 'text-green-700' : 'text-gray-700'
-                        }`}>{item.label}</span>
-                      </motion.button>
-                    )
-                  })}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
         </motion.div>
       </div>
     </>
