@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { User, FolderOpen, Code, BookOpen, Trophy, Mail } from 'lucide-react'
+import { User, FolderOpen, Code, BookOpen, Trophy } from 'lucide-react'
 
 const Navigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null)
@@ -11,7 +11,6 @@ const Navigation: React.FC = () => {
     { id: 'skills', label: 'Skills', icon: Code },
     { id: 'blogs', label: 'Blogs', icon: BookOpen },
     { id: 'achievements', label: 'Achievements', icon: Trophy },
-    { id: 'contact', label: 'Contact', icon: Mail },
   ]
 
   const scrollToSection = (sectionId: string) => {
