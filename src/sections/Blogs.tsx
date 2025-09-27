@@ -42,15 +42,28 @@ const Blogs: React.FC = () => {
           <p className="text-sm sm:text-base text-gray-600 max-w-2xl font-mono mb-4">
             Technical articles and insights I share on Medium.
           </p>
-          <a
+          <motion.a
             href="https://medium.com/@sa7vik"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg font-mono font-semibold text-sm hover:bg-primary-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400"
+            className="group relative inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-orange-500/20 to-red-500/20 backdrop-blur-md border border-orange-400/30 rounded-2xl font-mono font-bold text-gray-800 shadow-xl hover:shadow-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400 text-base overflow-hidden"
+            style={{ WebkitBackdropFilter: 'blur(12px)' }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
           >
-            <ExternalLink className="w-4 h-4" />
-            See all blogs on Medium
-          </a>
+            {/* Animated background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <ExternalLink className="w-5 h-5 text-orange-600 group-hover:text-orange-700 transition-colors duration-300 relative z-10" />
+            <span className="relative z-10">See all blogs on Medium</span>
+            
+            {/* Shine effect */}
+            <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-300"></div>
+          </motion.a>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
           {/* Animated gradient bar behind blog cards */}
