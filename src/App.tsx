@@ -2,12 +2,13 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Portfolio from './components/Portfolio'
 import Chatbot from './components/Chatbot'
+import Navigation from './components/Navigation'
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Portfolio />} />
+        <Route path="/" element={<><Portfolio /><Navigation /></>} />
         <Route path="/chatbot" element={<Chatbot />} />
       </Routes>
     </Router>

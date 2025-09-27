@@ -16,12 +16,12 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: '1',
-      title: 'DermCare Solutions',
-      status: 'Live',
-      description: 'AI-powered skin disease diagnosis platform that identifies 30+ skin conditions with 98% accuracy. Features secure patient portal with detailed diagnostic reports and HIPAA-compliant telemedicine for direct doctor consultations.',
-      technologies: ['Computer Vision', 'Machine Learning', 'Healthcare', 'Python', 'TensorFlow', 'OpenCV'],
-      githubUrl: 'https://github.com/SA7VIK/DermCareSolutions',
-      liveUrl: 'https://6572f7c7bb457577f1524ca2--golden-liger-f4b46a.netlify.app'
+      title: 'LLM Hallucination Detection Pipeline',
+      status: 'WIP',
+      description: 'Advanced pipeline that detects hallucinations in LLM responses by analyzing log probabilities and confidence rates. The system evaluates text authenticity by examining token-level confidence scores, providing a factual accuracy assessment for AI-generated content.',
+      technologies: ['Machine Learning', 'NLP', 'Log Probability Analysis', 'Python', 'LLM Evaluation', 'Confidence Scoring'],
+      githubUrl: 'https://github.com/SA7VIK/Ai-Evaluation',
+      liveUrl: 'https://github.com/SA7VIK/Ai-Evaluation'
     },
     {
       id: '2',
@@ -43,21 +43,12 @@ const Projects: React.FC = () => {
     },
     {
       id: '4',
-      title: 'Portfolio Chatbot',
+      title: 'DermCare Solutions',
       status: 'Live',
-      description: 'AI-powered portfolio chatbot using RAG and LLM to provide information about skills, experience, and projects.',
-      technologies: ['React', 'FastAPI', 'Python', 'RAG', 'LLM', 'TailwindCSS'],
-      githubUrl: 'https://github.com/sa7vik/portfolio-chatbot',
-      liveUrl: 'https://your-portfolio.com'
-    },
-    {
-      id: '5',
-      title: 'LLM Hallucination Detection Pipeline',
-      status: 'Live',
-      description: 'Advanced pipeline that detects hallucinations in LLM responses by analyzing log probabilities and confidence rates. The system evaluates text authenticity by examining token-level confidence scores, providing a factual accuracy assessment for AI-generated content.',
-      technologies: ['Machine Learning', 'NLP', 'Log Probability Analysis', 'Python', 'LLM Evaluation', 'Confidence Scoring'],
-      githubUrl: 'https://github.com/sa7vik/llm-hallucination-detection',
-      liveUrl: 'https://llm-hallucination-detection.onrender.com'
+      description: 'AI-powered skin disease diagnosis platform that identifies 30+ skin conditions with 98% accuracy. Features secure patient portal with detailed diagnostic reports and HIPAA-compliant telemedicine for direct doctor consultations.',
+      technologies: ['Computer Vision', 'Machine Learning', 'Healthcare', 'Python', 'TensorFlow', 'OpenCV'],
+      githubUrl: 'https://github.com/SA7VIK/DermCareSolutions',
+      liveUrl: 'https://6572f7c7bb457577f1524ca2--golden-liger-f4b46a.netlify.app'
     },
 
   ]
