@@ -34,7 +34,7 @@ const Navigation: React.FC = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block"
+        className="fixed right-4 bottom-8 z-50 hidden lg:block"
       >
         <div className="flex flex-col gap-3">
           {navItems.map((item) => {
@@ -65,7 +65,7 @@ const Navigation: React.FC = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 lg:hidden"
+        className="fixed right-4 bottom-8 z-50 lg:hidden"
       >
         <div className="flex flex-col gap-3">
           {navItems.map((item) => {
