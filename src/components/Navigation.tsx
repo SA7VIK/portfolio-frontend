@@ -4,6 +4,7 @@ import { User, FolderOpen, Code, BookOpen, Trophy, Mail, Menu, X } from 'lucide-
 
 const Navigation: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState<string | null>(null)
   
   const navItems = [
     { id: 'about', label: 'Experience', icon: User },
@@ -15,7 +16,17 @@ const Navigation: React.FC = () => {
   ]
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+    console.log('Scrolling to section:', sectionId)
+    setActiveSection(sectionId)
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+      console.log('Successfully scrolled to:', sectionId)
+      // Clear active section after animation
+      setTimeout(() => setActiveSection(null), 1000)
+    } else {
+      console.error('Section not found:', sectionId)
+    }
     setIsMobileMenuOpen(false)
   }
 
@@ -64,8 +75,11 @@ const Navigation: React.FC = () => {
           <div className="flex items-center justify-between p-3">
             {/* Mobile Menu Button */}
             <motion.button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="flex items-center justify-center w-10 h-10 bg-white/30 rounded-xl"
+              onClick={() => {
+                console.log('Mobile menu toggled:', !isMobileMenuOpen)
+                setIsMobileMenuOpen(!isMobileMenuOpen)
+              }}
+              className="flex items-center justify-center w-10 h-10 bg-white/30 rounded-xl hover:bg-white/40 transition-colors duration-200"
               whileTap={{ scale: 0.95 }}
             >
               {isMobileMenuOpen ? (
@@ -82,11 +96,21 @@ const Navigation: React.FC = () => {
                 return (
                   <motion.button
                     key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className="flex items-center justify-center w-10 h-10 bg-white/30 rounded-xl hover:scale-105 transition-all duration-200"
+                    onClick={() => {
+                      console.log('Quick access button clicked:', item.id)
+                      scrollToSection(item.id)
+                    }}
+                    className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 ${
+                      activeSection === item.id 
+                        ? 'bg-green-500/30 scale-110' 
+                        : 'bg-white/30 hover:bg-white/40 hover:scale-105'
+                    }`}
                     whileTap={{ scale: 0.95 }}
+                    title={item.label}
                   >
-                    <Icon className="w-4 h-4 text-gray-700" />
+                    <Icon className={`w-4 h-4 ${
+                      activeSection === item.id ? 'text-green-700' : 'text-gray-700'
+                    }`} />
                   </motion.button>
                 )
               })}
@@ -109,12 +133,23 @@ const Navigation: React.FC = () => {
                     return (
                       <motion.button
                         key={item.id}
-                        onClick={() => scrollToSection(item.id)}
-                        className="w-full flex items-center gap-3 px-3 py-2 bg-white/20 rounded-xl hover:bg-white/30 transition-all duration-200 text-left"
+                        onClick={() => {
+                          console.log('Dropdown menu item clicked:', item.id)
+                          scrollToSection(item.id)
+                        }}
+                        className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl transition-all duration-200 text-left ${
+                          activeSection === item.id 
+                            ? 'bg-green-500/20 scale-105' 
+                            : 'bg-white/20 hover:bg-white/30'
+                        }`}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <Icon className="w-4 h-4 text-gray-700" />
-                        <span className="text-sm font-mono text-gray-700">{item.label}</span>
+                        <Icon className={`w-4 h-4 ${
+                          activeSection === item.id ? 'text-green-700' : 'text-gray-700'
+                        }`} />
+                        <span className={`text-sm font-mono ${
+                          activeSection === item.id ? 'text-green-700' : 'text-gray-700'
+                        }`}>{item.label}</span>
                       </motion.button>
                     )
                   })}
