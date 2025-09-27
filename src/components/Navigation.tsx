@@ -61,45 +61,47 @@ const Navigation: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Mobile Navigation - Bottom Fixed Bar */}
-      <div className="fixed bottom-4 left-4 right-4 z-50 lg:hidden">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="bg-white/20 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg"
-          style={{ WebkitBackdropFilter: 'blur(12px)' }}
-        >
-          <div className="flex items-center justify-center p-3">
-            {/* All Navigation Buttons */}
-            <div className="flex gap-2 overflow-x-auto scrollbar-hide">
-              {navItems.map((item) => {
-                const Icon = item.icon
-                return (
-                  <motion.button
-                    key={item.id}
-                    onClick={() => {
-                      console.log('Mobile button clicked:', item.id)
-                      scrollToSection(item.id)
-                    }}
-                    className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 flex-shrink-0 ${
-                      activeSection === item.id 
-                        ? 'bg-green-500/30 scale-110' 
-                        : 'bg-white/30 hover:bg-white/40 hover:scale-105'
-                    }`}
-                    whileTap={{ scale: 0.95 }}
-                    title={item.label}
-                  >
-                    <Icon className={`w-4 h-4 ${
-                      activeSection === item.id ? 'text-green-700' : 'text-gray-700'
-                    }`} />
-                  </motion.button>
-                )
-              })}
-            </div>
-          </div>
-        </motion.div>
-      </div>
+      {/* Mobile Navigation - Right Sidebar */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 lg:hidden"
+      >
+        <div className="flex flex-col gap-3">
+          {navItems.map((item) => {
+            const Icon = item.icon
+            return (
+              <motion.button
+                key={item.id}
+                onClick={() => {
+                  console.log('Mobile button clicked:', item.id)
+                  scrollToSection(item.id)
+                }}
+                className={`group relative flex items-center justify-center w-12 h-12 rounded-full shadow-lg transition-all duration-200 ${
+                  activeSection === item.id 
+                    ? 'bg-green-500/30 scale-110' 
+                    : 'bg-white/20 backdrop-blur-md border border-white/20 hover:scale-110 hover:brightness-110'
+                }`}
+                style={{ WebkitBackdropFilter: 'blur(12px)' }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Icon className={`w-5 h-5 transition-colors duration-200 ${
+                  activeSection === item.id 
+                    ? 'text-green-700' 
+                    : 'text-gray-700 group-hover:text-gray-900'
+                }`} />
+                
+                {/* Tooltip */}
+                <div className="absolute right-full mr-3 px-3 py-1 bg-gray-900 text-white text-sm font-mono rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+                  {item.label}
+                </div>
+              </motion.button>
+            )
+          })}
+        </div>
+      </motion.div>
     </>
   )
 }
