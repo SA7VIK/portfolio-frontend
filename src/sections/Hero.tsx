@@ -109,27 +109,64 @@ const Hero: React.FC = () => {
           </motion.div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col items-start mb-6 sm:mb-8">
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="flex flex-col items-start mb-8 sm:mb-12"
+          >
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <motion.a
                 href="/chatbot"
-                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-white/30 backdrop-blur-md border border-white/30 rounded-xl font-mono font-semibold text-black shadow-lg hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm sm:text-base"
+                className="group relative flex items-center justify-center gap-3 px-6 sm:px-8 py-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-md border border-blue-400/30 rounded-2xl font-mono font-bold text-gray-800 shadow-xl hover:shadow-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 text-base sm:text-lg overflow-hidden"
                 style={{ WebkitBackdropFilter: 'blur(12px)' }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Ask My AI
-              </a>
-              <a
+                {/* Animated background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 group-hover:text-blue-700 transition-colors duration-300 relative z-10" />
+                <span className="relative z-10">Ask My AI</span>
+                
+                {/* Shine effect */}
+                <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-300"></div>
+              </motion.a>
+              
+              <motion.a
                 href="https://drive.google.com/file/d/1gSwhAMhyevVlYe8QRe-DzlR3UCvpuFGV/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-white/20 backdrop-blur-md border border-white/20 rounded-xl font-mono font-semibold text-black shadow hover:scale-105 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-400 text-sm sm:text-base"
+                className="group relative flex items-center justify-center gap-3 px-6 sm:px-8 py-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-md border border-green-400/30 rounded-2xl font-mono font-bold text-gray-800 shadow-xl hover:shadow-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 text-base sm:text-lg overflow-hidden"
                 style={{ WebkitBackdropFilter: 'blur(12px)' }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Resume
-              </a>
+                {/* Animated background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 group-hover:text-green-700 transition-colors duration-300 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span className="relative z-10">Resume</span>
+                
+                {/* Shine effect */}
+                <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-300"></div>
+              </motion.a>
             </div>
-          </div>
+            
+            {/* Decorative elements */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+              className="mt-6 flex items-center gap-2 text-sm text-gray-500 font-mono"
+            >
+              <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+              <span>Available for opportunities</span>
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+            </motion.div>
+          </motion.div>
         </motion.div>
         
         {/* Scroll Indicator */}
