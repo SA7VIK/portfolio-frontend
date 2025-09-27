@@ -17,7 +17,7 @@ const Portfolio: React.FC = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50"
+        className="fixed left-4 bottom-8 z-50"
       >
         <div className="flex flex-col gap-3">
           <motion.a
